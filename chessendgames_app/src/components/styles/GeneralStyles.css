@@ -1,0 +1,43 @@
+.home {
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    height: min-content;
+  }
+
+.leftColumn {
+    padding: 1rem;
+  }
+
+.rightColumn {
+    padding: 1rem;
+    float: none;
+    text-align: justify;
+    overflow: hidden;
+  }
+
+h1 {
+    text-align: center;
+  }
+
+.endgameTypesTable {
+    margin-top: 50px;
+  }
+
+p.ETypeDesc {
+    margin-left: 2em;
+    margin-right: 2em;
+    text-align: justify;
+  }
+
+.literature {
+    margin-top: 2em;
+    text-align: justify;
+  }
+
+.tag-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1em;
+}

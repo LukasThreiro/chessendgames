@@ -1,5 +1,7 @@
 import express from "express";
 import mongoose from "mongoose"
+import bodyParser from "body-parser"
+import cors from "cors"
 
 import routes from "./routes/routes.js"
 import Config from "./config/config.js"
@@ -16,6 +18,8 @@ mongoose.connect(Config.db).then(() => {
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
+app.use(bodyParser.json());
+app.use(cors());
 app.use("/api", routes);
 
 app.listen(Config.port, () => {

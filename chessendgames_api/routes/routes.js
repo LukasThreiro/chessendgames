@@ -5,10 +5,14 @@ import DBConnection from "../services/dbConnection.js"
 const router = express.Router();
 
 router.post("/analysePosition", async function(req, res) {
-    var fen = req.body["fen"];
-    var stockfish = new Stockfish();
-    var response = await stockfish.analysePosition(fen, 12, 1);
-    res.json(response)
+    try {
+        var fen = req.body["fen"];
+        var stockfish = new Stockfish();
+        var response = await stockfish.analysePosition(fen, 12, 1);
+        res.json(response);
+    } catch (error) {
+        return res.status(400).json({status: 400, message: "Unknown error"});
+    }
 });
 
 router.post("/endgameTypes", async function(req, res) {

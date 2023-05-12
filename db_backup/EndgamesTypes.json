@@ -1,0 +1,109 @@
+[{
+  "_id": {
+    "$oid": "63fe6be8ba6f084d32823c4d"
+  },
+  "symbol": "E001",
+  "name": "Jeden pion",
+  "learningOrder": 101,
+  "desc": "W tej pozycji ważne jest, żeby król przeciwnika nie zdołał zająć tzw. opozycji. Należy pilnować, by nie utracić możliwości dotarcia własnym królem do pola przemiany przy jednoczesnym asekurowaniu piona.",
+  "video_url": ""
+},{
+  "_id": {
+    "$oid": "63fe6daeba6f084d32823c4f"
+  },
+  "symbol": "E002",
+  "name": "Jedna wieża",
+  "learningOrder": 102,
+  "desc": "W tej pozycji należy przemieszczać się wieżą w ten sposób, żeby blokować kolejne linie królowi przeciwnika.",
+  "video_url": ""
+},{
+  "_id": {
+    "$oid": "63fe6e52ba6f084d32823c50"
+  },
+  "symbol": "E003",
+  "name": "Dwa gońce",
+  "learningOrder": 103,
+  "desc": "Należy współpracowac dwoma gońcami i królem w ten sposób, żeby zmusić króla przeciwnika do zajęcia ostatniej linii, a następnie zmusić go do przemieszczenia się do rogu, gdzie możliwe będzie danie mata.",
+  "video_url": ""
+},{
+  "_id": {
+    "$oid": "645bec1686280e749e952456"
+  },
+  "symbol": "E004",
+  "name": "Dwa skoczki vs pion",
+  "learningOrder": "104",
+  "desc": "W tego typu pozycjach bardzo ważne jest, żeby nie doprowadzić do pata. Z tego powodu nie wolno nam zbić piona przeciwnika, ponieważ tylko on sprawi, że po otoczeniu króla przeciwnik będzie miał dostępny inny ruch znim my damy mu mata. ",
+  "video_url": ""
+},{
+  "_id": {
+    "$oid": "645bed0086280e749e952457"
+  },
+  "symbol": "E005",
+  "name": "Wieża i pion vs wieża",
+  "learningOrder": "105",
+  "desc": "To klasyczny rodzaj pozycji, w których musimy doprowadzić piona do pola przemiany zmuszając przeciwnika do zbicia go swoją wieżą. Wtedy naszą wieżą będziemy mogli dać mata. Te pozycje nie zawsze są możliwe do wygrania. Łatwo w nich o błędy. Najlepszym sposobem na ich opanowanie jest regularny trening.",
+  "video_url": "https://www.youtube.com/watch?v=CjHkKyECiWg"
+},{
+  "_id": {
+    "$oid": "645bedd886280e749e952458"
+  },
+  "symbol": "E006",
+  "name": "Wieża i goniec vs wieża",
+  "learningOrder": "106",
+  "desc": "Wygranie tej pozycji jest możliwe jedynie w pewnych charakterystycznych przypadkach. Król przeciwnika musi znajdować się na przedostatniej albo ostatniej linii, a nasze figury odpowiednio go otaczać. Jedynym sposobem na opanowanie tych pozycji jest regularny trening.",
+  "video_url": ""
+},{
+  "_id": {
+    "$oid": "645bee7486280e749e952459"
+  },
+  "symbol": "E007",
+  "name": "Hetman vs wieża",
+  "learningOrder": "107",
+  "desc": "To jedna z najtrudniejszych typów pozycji. Zazwyczaj takie pozycje są obiektywnie remisowe. Jednak w praktyce gracze nawet na wysokim poziomie popełniają tu błędy. Do wygrywania takich pozycji wymagana jest umiejętnośc liczenia wariantów wiele ruchów wprzód oraz duże doświadczenie.",
+  "video_url": ""
+},{
+  "_id": {
+    "$oid": "645bef2d86280e749e95245a"
+  },
+  "symbol": "E008",
+  "name": "Skoczek i goniec",
+  "learningOrder": "108",
+  "desc": "Mat skoczkiem i gońcem jest uważany za najtrudniejszą ze wszystkich pozycji końcowych. Jednocześnie tego typu pozycje zdarzają się niezwykle rzadko, dlatego grono szachistów, którzy decydują się opanować tę sztukę jest niewielkie. Istnieją dwie metody prowadzące do mata. My proponujemy metodę trójkątów. Zachęcamy do obejrzenia nagrania na youtube.",
+  "video_url": ""
+},{
+  "_id": {
+    "$oid": "645e9cf8622ad48fc94a7da6"
+  },
+  "symbol": "E009",
+  "name": "Dwie wieże vs wieża",
+  "learningOrder": 109,
+  "desc": "",
+  "video_url": ""
+},{
+  "_id": {
+    "$oid": "645e9d20622ad48fc94a7da7"
+  },
+  "symbol": "E010",
+  "name": "Kombinacje pionowe 1",
+  "learningOrder": 110,
+  "desc": "",
+  "video_url": ""
+},{
+  "_id": {
+    "$oid": "645e9d38622ad48fc94a7da8"
+  },
+  "symbol": "E011",
+  "name": "Kombinacje pionowe 2",
+  "learningOrder": 111,
+  "desc": "",
+  "video_url": ""
+},{
+  "_id": {
+    "$oid": "645e9d4c622ad48fc94a7da9"
+  },
+  "symbol": "E012",
+  "name": "Kombinacje pionowe 3",
+  "learningOrder": 112,
+  "desc": "",
+  "video_url": ""
+}]

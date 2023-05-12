@@ -1,5 +1,8 @@
 <template>
     <v-app>
+        <div class="heading">
+            <img class="headingImg" src="../assets/cbw4.png" alt="Heading">
+        </div>
         <div class="home">
                 <div class="leftColumn">
                     <MainSidebar />

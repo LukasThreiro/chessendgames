@@ -1,24 +1,29 @@
 <template>
     <v-app>
+        <div class="heading">
+            <img class="headingImg" src="../assets/cbw4.png" alt="Heading">
+        </div>
         <div class="home">
             <div class="leftColumn">
                 <MainSidebar />
                 <img src="../assets/chess_wallpaper1.jpg" alt="" width="350" height="600"/>
             </div>
-            <div class="rightColumn">
-                <div>
-                    <h2>Wybierz typ końcówek, który chcesz przećwiczyć</h2>
+            <div class="rightColumnv2">
+                <div class="positionList">
+                    <div>
+                        <h2>Wybierz typ końcówek, który chcesz przećwiczyć</h2>
 
-                    <el-tag type="success" v-for="e in endgameTypes" :key="e._id">
-                        <button @click="loadPositions(e)"> {{ e.name }} </button>
-                    </el-tag>
-                </div>
-                <div v-if="selectedEndgameType">
-                    <h3>Zadania typu {{ selectedEndgameType.name }}</h3>
-                    <div class="tag-container">
-                        <el-tag type="success" v-for="p in endgamePositions" :key="p._id">
-                            <button @click="trainPosition(p)"> {{ p.learningOrder }} </button>
+                        <el-tag class="positionList" type="success" v-for="e in endgameTypes" :key="e._id">
+                            <button @click="loadPositions(e)" class="endgameTypeButton"> {{ e.name }} </button>
                         </el-tag>
+                    </div>
+                    <div v-if="selectedEndgameType">
+                        <h3>Zadania typu {{ selectedEndgameType.name }}</h3>
+                        <div>
+                            <el-tag type="success" class="positionList" v-for="p in endgamePositions" :key="p._id">
+                                <button @click="trainPosition(p)" class="positionButton"> Zadanie {{ " " + p.learningOrder }} </button>
+                            </el-tag>
+                        </div>
                     </div>
                 </div>
                 <div class="chessboard">
@@ -30,7 +35,16 @@
                     </div>
 
                     <div id="board1"></div>
-                    
+
+                    <div v-if="selectedEndgamePosition" class="underBoard">
+                        <p v-if="positionScoreFlag">Ocena pozycji: {{ positionScore }}</p>
+
+                        <p v-if="game.fen()">FEN: {{ game.fen() }}</p>
+
+                        <div v-if="gameOver">
+                            <button @click="trainPosition(selectedEndgamePosition)">Spróbuj ponownie</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -61,7 +75,9 @@
                 gameOver: false,
                 gameOverMsg: "",
                 moveFrom: "",
-                moveTo: ""
+                moveTo: "",
+                positionScore: "",
+                positionScoreFlag: false,
             };
         },
         methods: {
@@ -78,6 +94,8 @@
             async loadPositions(e) {
                 this.selectedEndgameType = e;
                 this.selectedEndgamePosition = "";
+                this.positionScore = "";
+                this.positionScoreFlag = false;
 
                 if (this.board != null) {
                     this.board.destroy();
@@ -122,6 +140,8 @@
             async trainPosition(p) {
                 this.selectedEndgamePosition = p;
                 this.gameOver = false;
+                this.positionScore = "";
+                this.positionScoreFlag = false;
                 
                 if (this.selectedEndgamePosition.type == "draw") {
                     this.movesCounter = 10;
@@ -169,12 +189,13 @@
                     this.movesCounter -= 1;
                 }
 
-                var score = analys.moves[0].score.value;
+                this.positionScore = analys.moves[0].score.value;
+                this.positionScoreFlag = true;
 
                 if (((this.positionToDraw) && (this.movesCounter == 0))
-                    || ((this.positionToDraw) && (Math.abs(score) > 200))
+                    || ((this.positionToDraw) && (Math.abs(this.positionScore) > 200))
                     || (this.game.game_over()) ) {
-                        this.GameOver(this.game.fen(), score);
+                        this.GameOver(this.game.fen());
                 }
             },
             onDragStart(source, piece) {
@@ -206,14 +227,14 @@
             onSnapEnd () {
                 this.board.position(this.game.fen())
             },
-            async GameOver(fen, score) {
+            async GameOver(fen) {
                 this.currentBoardConfig.position = fen;
                 this.board.destroy();
                 this.board = ChessBoard("board1", this.currentBoardConfig);
                 this.gameOver = true;
 
                 if (this.positionToDraw) {
-                    if (Math.abs(score) > 200) {
+                    if (Math.abs(this.positionScore) > 200) {
                         this.gameOverMsg = "Niestety. Nie udało się utrzymać remisu."
                     } else {
                         this.gameOverMsg = "Gratulacje. Udało się utrzymać remis."

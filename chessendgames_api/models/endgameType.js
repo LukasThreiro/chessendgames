@@ -14,6 +14,9 @@ var endgameTypeSchema = new Schema({
 	},
 	desc: {
 		type: String
+	},
+	video_url: {
+		type: String
 	}
 }, {
 	collection: "EndgamesTypes"

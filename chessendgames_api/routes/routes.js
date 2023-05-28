@@ -4,6 +4,7 @@ import DBConnection from "../services/dbConnection.js"
 
 const router = express.Router();
 
+// Input params: symbol: str
 router.post("/positions", async function(req, res) {
     try {
         var symbol = req.body["symbol"];
@@ -20,6 +21,7 @@ router.post("/positions", async function(req, res) {
     res.json(response);
 });
 
+// Input params: fen: str
 router.post("/analysePosition", async function(req, res) {
     try {
         var fen = req.body["fen"];

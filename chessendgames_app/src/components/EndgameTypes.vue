@@ -15,13 +15,19 @@
                     </p>
 
                     <el-tag class="positionList" type="success" v-for="e in endgameTypes" :key="e._id">
-                        <button class="endgameTypeButton" @click="showDescription(e)"> {{ e.name }} </button>
+                        <button class="endgameTypeButton" @click="showDescription(e)">
+                            {{ e.name }}
+                        </button>
                     </el-tag>
 
                     <div v-if="selectedEndgameType">
                         <p> {{ selectedEndgameType.name }} </p>
                         <p> {{ selectedEndgameType.desc }} </p>
-                        <p> <button onclick="location.href=' {{selectedEndgameType.video_url}} '" type="button"> Zobacz na YouTube </button> </p>
+                        <p>
+                            <button onclick="location.href=' {{selectedEndgameType.video_url}} '" type="button"> 
+                                Zobacz na YouTube 
+                            </button>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -30,6 +36,7 @@
 
 <script>
     import MainSidebar from "./MainSidebar.vue"
+    import generalCfg from "../../generalCfg.js"
 
     export default {
         name: "EndgameTypes",
@@ -45,7 +52,7 @@
         methods: {
             async getData() {
                 try {
-                    let response = await fetch("http://localhost:9000/api/endgameTypes", {
+                    let response = await fetch(generalCfg.backendUrl + "/endgameTypes", {
                         method: "POST",
                     });
                     this.endgameTypes = await response.json();

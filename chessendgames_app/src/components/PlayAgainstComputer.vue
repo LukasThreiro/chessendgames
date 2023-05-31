@@ -55,6 +55,7 @@
     import MainSidebar from "./MainSidebar.vue"
     import ChessBoard from "chessboardjs-vue3"
     import Chess from "chess.js"
+    import generalCfg from "../../generalCfg.js"
 
     export default {
         name: "PlayAgainstComputer",
@@ -83,7 +84,7 @@
         methods: {
             async getData() {
                 try {
-                    let response = await fetch("http://localhost:9000/api/endgameTypes", {
+                    let response = await fetch(generalCfg.backendUrl + "/endgameTypes", {
                         method: "POST",
                     });
                     this.endgameTypes = await response.json();
@@ -103,7 +104,7 @@
                 }
 
                 try {
-                    let response = await fetch("http://localhost:9000/api/positions", {
+                    let response = await fetch(generalCfg.backendUrl + "/positions", {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json"
@@ -120,7 +121,7 @@
             },
             async getAnalys(fen) {
                 try {
-                    let response = await fetch("http://localhost:9000/api/analysePosition", {
+                    let response = await fetch(generalCfg.backendUrl + "/analysePosition", {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json"

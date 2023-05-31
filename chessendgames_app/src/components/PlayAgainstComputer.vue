@@ -168,7 +168,7 @@
                 this.game = new Chess(p.fen);
             },
             async onChange(oldPos, newPos) {
-                this.game.move({from: moveFrom, to: moveTo, promotion: "q"})
+                this.game.move({from: moveFrom, to: moveTo})
 
                 if (this.game.game_over()) {
                     this.GameOver(ChessBoard.objToFen(newPos), 0);
@@ -181,7 +181,7 @@
                 var moveTo = analys.moves[0].uci[0].slice(-2);
 
                 // make move
-                this.game.move({from: moveFrom, to: moveTo, promotion: "q"});
+                this.game.move({from: moveFrom, to: moveTo});
                 this.currentBoardConfig.position = this.game.fen();
                 this.board.destroy();
                 this.board = ChessBoard("board1", this.currentBoardConfig);

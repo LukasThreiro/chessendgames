@@ -9,9 +9,9 @@
                     <img src="../assets/chess_wallpaper1.jpg" alt="" width="350" height="600"/>
                 </div>
                 <div class="rightColumn">
-                    <h1>Trening końcówek szachowych</h1>
+                    <h1>Dzień dobry!</h1>
                     <p>
-                        Witryna umożliwia trening końcówek szachowych. Przejdź do leksykonu by zapoznać się z różnymi typami końcówek. To może być pierwszy krok na drodze od amatorskiego grania w szachy do profesjonalnej rozgrywki na wysokim poziomie.
+                        Witryna umożliwia trening końcówek szachowych. Przejdź do leksykonu by zapoznać się z różnymi typami końcówek. Przejdź do sekcji gry z komputerem, aby spróbować swoich sił przeciwko silnikowi szachowemu. Jeśli chcesz znaleźć więcej informacji o poprawnym sposobie trenowania oraz dowiedzieć się więcej o tym, dlaczego warto to robić, przejdź do zakładki Dlaczego Warto. To może być pierwszy krok na drodze od amatorskiego grania w szachy do profesjonalnej rozgrywki na wysokim poziomie.
                     </p>
                 </div>
             </div>

@@ -1,5 +1,7 @@
 # Chessendgames
 
+An application that facilitates learning how to play chess endgames
+
 ## Api - Node.js
 ## Application - Vue.js
 

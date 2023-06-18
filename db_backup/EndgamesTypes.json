@@ -5,7 +5,7 @@
   "symbol": "E001",
   "name": "Jeden pion",
   "learningOrder": 101,
-  "desc": "W tej pozycji ważne jest, żeby król przeciwnika nie zdołał zająć tzw. opozycji. Należy pilnować, by nie utracić możliwości dotarcia własnym królem do pola przemiany przy jednoczesnym asekurowaniu piona.",
+  "desc": "W sytuacji, w której jeden z graczy dysponuje pojedynczym pionem, a drugiemu nie zostały już żadne piony ani figury, wiele zależy od tego, na której z linii ten pion się znajduje. Jeśli pion znajduje się na jednej z krańcowych linii, czyli A albo H, wtedy samotnemu królowi łatwiej będzie utrzymać szansę na remis.\n\nJednak w każdym z dwóch przypadków wygrana dla strony posiadającej piona może być możliwa albo nie. Wszystko zależy od tego, czy samotny król będzie w stanie zdążyć stanąć przed pionem, blokując mu możliwość dalszego poruszania się naprzód. Jeśli tak się stanie, a dodatkowo król przeciwnika oraz samotny król znajdą się wobec siebie w położeniu w którym ilekroś król przeciwnika wykona ruch, tylekroć samotny król będzie w stanie ustawić się naprzeciw niego, wtedy samotny król będzie mógł utrzymać remis. Mówimy wtedy o tzw. opozycji. Jeśli chcesz obejrzeć nagranie, w którym wszystkie te sytuacje są omawiane na szachownicy, kliknij w przycisk poniżej.",
   "video_url": ""
 },{
   "_id": {
